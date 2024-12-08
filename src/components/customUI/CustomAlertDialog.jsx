@@ -1,4 +1,4 @@
-// src/components/myUi/MyAlertDialog.jsx
+// src/components/customUI/CustomAlertDialog.jsx
 import {
   AlertDialog,
   AlertDialogAction,

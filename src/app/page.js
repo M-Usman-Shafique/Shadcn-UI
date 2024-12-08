@@ -1,22 +1,24 @@
 // src/app/page.js
-import MyAlertDialog from "@/components/myUi/MyAlertDialog";
+import CustomAlertDialog from "@/components/customUI/CustomAlertDialog";
+import CustomForm from "@/components/customUI/CustomForm";
 import PostCard from "@/components/PostCard";
 import { ModeToggle } from "@/components/ui/ModeToggle";
 import UserCard from "@/components/UserCard";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <div className="flex justify-center gap-3 py-20">
+    <div className="min-h-screen flex flex-col items-center">
+      <div className="flex justify-center gap-3">
         <ModeToggle />
-        <MyAlertDialog triggerText="Browse">
+        <CustomAlertDialog triggerText="Browse">
           <UserCard />
           <PostCard />
-        </MyAlertDialog>
+        </CustomAlertDialog>
       </div>
-      <p className="bg-secondary-foreground text-secondary dark:bg-primary dark:text-primary-foreground text-center">
+      {/* <p className="bg-secondary-foreground text-secondary dark:bg-primary dark:text-primary-foreground text-center">
         Hello Shadcn UI
-      </p>
+      </p> */}
+      <CustomForm />
     </div>
   );
 }
