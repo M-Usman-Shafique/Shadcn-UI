@@ -16,7 +16,7 @@ export default function MyAlertDialog({ children, triggerText }) {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button>{triggerText}</Button>
+        <Button variant="outline" size="default">{triggerText}</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

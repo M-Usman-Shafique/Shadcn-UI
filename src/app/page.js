@@ -6,7 +6,7 @@ import UserCard from "@/components/UserCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex justify-center min-h-screen gap-3 py-20">
       <ModeToggle />
       <MyAlertDialog triggerText="Browse">
         <UserCard />
