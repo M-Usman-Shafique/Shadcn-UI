@@ -6,12 +6,17 @@ import UserCard from "@/components/UserCard";
 
 export default function Home() {
   return (
-    <div className="flex justify-center min-h-screen gap-3 py-20">
-      <ModeToggle />
-      <MyAlertDialog triggerText="Browse">
-        <UserCard />
-        <PostCard />
-      </MyAlertDialog>
+    <div className="min-h-screen">
+      <div className="flex justify-center gap-3 py-20">
+        <ModeToggle />
+        <MyAlertDialog triggerText="Browse">
+          <UserCard />
+          <PostCard />
+        </MyAlertDialog>
+      </div>
+      <p className="bg-secondary-foreground text-secondary dark:bg-primary dark:text-primary-foreground text-center">
+        Hello Shadcn UI
+      </p>
     </div>
   );
 }
