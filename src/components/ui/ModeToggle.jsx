@@ -1,6 +1,6 @@
 // src/components/ui/ModeToggle.jsx
 "use client";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, MonitorSmartphone } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import CustomDropdown from "../customUI/CustomDropdown";
@@ -18,9 +18,33 @@ export function ModeToggle() {
         </Button>
       }
       items={[
-        { content: "Light", onClick: () => setTheme("light") },
-        { content: "Dark", onClick: () => setTheme("dark") },
-        { content: "System", onClick: () => setTheme("system") },
+        {
+          content: (
+            <>
+              <Sun />
+              <span>Light</span>
+            </>
+          ),
+          onClick: () => setTheme("light"),
+        },
+        {
+          content: (
+            <>
+              <Moon />
+              <span>Dark</span>
+            </>
+          ),
+          onClick: () => setTheme("dark"),
+        },
+        {
+          content: (
+            <>
+              <MonitorSmartphone />
+              <span>System</span>
+            </>
+          ),
+          onClick: () => setTheme("system"),
+        },
       ]}
     />
   );
