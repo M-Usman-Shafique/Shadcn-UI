@@ -22,7 +22,7 @@ import {
 
 const formSchema = z
   .object({
-    username: z.string().trim().min(3, "At least 3 characters required"),
+    // username: z.string().trim().min(3, "At least 3 characters required"),
     email: z.string().trim().email("Invalid email"),
     password: z
       .string()
@@ -52,7 +52,7 @@ const formSchema = z
 export default function CustomForm() {
   const form = useForm({
     defaultValues: {
-      username: "",
+      // username: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -75,7 +75,7 @@ export default function CustomForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="max-w-md w-full space-y-6"
       >
-        <FormField
+        {/* <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
@@ -87,7 +87,7 @@ export default function CustomForm() {
               <FormMessage />
             </FormItem>
           )}
-        />
+        /> */}
         <FormField
           control={form.control}
           name="email"
