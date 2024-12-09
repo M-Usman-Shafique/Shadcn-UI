@@ -1,10 +1,10 @@
 // src/components/MobNav.jsx
-import BurgerMenu from "./customUI/BurgerMenu";
+import CustomSheet from "./customUI/CustomSheet";
 
 export default function MobNav() {
   return (
     <div className="md:hidden">
-      <BurgerMenu />
+      <CustomSheet />
     </div>
   );
 }

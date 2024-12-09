@@ -6,19 +6,34 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import AvatarMenu from "./AvatarMenu";
+import { ModeToggle } from "../ui/ModeToggle";
+import Link from "next/link";
 
 export default function CustomSheet() {
   return (
     <Sheet>
-      <SheetTrigger>Open</SheetTrigger>
-      <SheetContent>
+      <SheetTrigger>
+        <Menu className="text-4xl text-primary" />
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col items-center gap-6">
         <SheetHeader>
-          <SheetTitle>Are you absolutely sure?</SheetTitle>
-          <SheetDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </SheetDescription>
+          <SheetTitle></SheetTitle>
+          <SheetDescription></SheetDescription>
         </SheetHeader>
+        <Link
+          href="/login"
+          className="p-2 hover:bg-secondary dark:hover:bg-white/5 w-full rounded-lg text-sm text-center"
+        >
+          Login
+        </Link>
+        <div className="p-2 hover:bg-secondary dark:hover:bg-white/5 w-full rounded-lg text-sm flex justify-center">
+          <AvatarMenu />
+        </div>
+        <div className="p-2 hover:bg-secondary dark:hover:bg-white/5 w-full rounded-lg flex justify-center">
+          <ModeToggle />
+        </div>
       </SheetContent>
     </Sheet>
   );
