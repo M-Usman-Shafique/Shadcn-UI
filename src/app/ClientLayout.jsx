@@ -1,7 +1,9 @@
 "use client";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
-import dynamic from "next/dynamic";
+import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
+
 const ThemeProvider = dynamic(
   () => import("@/components/theme-provider").then((mod) => mod.ThemeProvider),
   {
@@ -16,8 +18,10 @@ export default function ClientLayout({ children }) {
       enableSystem
       disableTransitionOnChange
     >
-      <Navbar />
-      {children}
+      <TooltipProvider>
+        <Navbar />
+        {children}
+      </TooltipProvider>
       <TailwindIndicator />
     </ThemeProvider>
   );
