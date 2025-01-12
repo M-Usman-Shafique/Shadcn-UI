@@ -9,7 +9,8 @@ import {
 import { Menu } from "lucide-react";
 import AvatarMenu from "./AvatarMenu";
 import { ModeToggle } from "../ui/ModeToggle";
-import Link from "next/link";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+// import Link from "next/link";
 
 export default function CustomSheet() {
   return (
@@ -22,12 +23,18 @@ export default function CustomSheet() {
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>
         </SheetHeader>
-        <Link
+        {/* <Link
           href="/login"
           className="p-2 hover:bg-secondary dark:hover:bg-white/5 w-full rounded-lg text-sm text-center"
         >
           Login
-        </Link>
+        </Link> */}
+        <SignedOut>
+          <SignInButton mode="modal" />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
         <div className="p-2 hover:bg-secondary dark:hover:bg-white/5 w-full rounded-lg text-sm flex justify-center">
           <AvatarMenu />
         </div>
